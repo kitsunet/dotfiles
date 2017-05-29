@@ -16,9 +16,10 @@ fpath=($DOTFILES/functions $fpath)
 
 autoload -U $DOTFILES/functions/*(:t)
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTSIZE=${HISTFILESIZE}
 
 
 setopt NO_BG_NICE # don't nice background tasks
@@ -49,6 +50,3 @@ bindkey '^[[5D' beginning-of-line
 bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^?' backward-delete-char
-
-# Use hh for history completion
-bindkey -s "^r" "\eqhh --\n"
