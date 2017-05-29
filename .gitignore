@@ -10,3 +10,6 @@ atom.symlink/blob-store
 atom.symlink/recovery
 
 git/gitconfig.local.symlink
+composer.symlink/*
+!composer.symlink/composer.json
+!composer.symlink/composer.lock

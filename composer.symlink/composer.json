@@ -1,0 +1,10 @@
+{
+    "require": {
+        "phpunit/phpunit": "~4.7",
+        "friendsofphp/php-cs-fixer": "*",
+        "sebastian/phpcpd": "*",
+        "squizlabs/php_codesniffer": "*",
+        "phpmetrics/phpmetrics": "*",
+        "clue/graph-composer": "^1.0"
+    }
+}
