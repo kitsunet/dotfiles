@@ -1,14 +1,17 @@
 # Local/private config goes in the include
 [include]
         path = ~/.gitconfig.local
-[hub]
-        protocol = https
 [alias]
         co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
+        promote = !$DOTFILES/bin/git-promote
+        wtf     = !$DOTFILES/bin/git-wtf
+        rank-contributors = !$DOTFILES/bin/git-rank-contributors
         count   = !git shortlog -sn
+        resetorigin = !git fetch origin && git reset --hard origin/master
+        pushmasterleaf = "!git stash && git checkout -b push origin/master && git cherry-pick master^0 && git push origin HEAD:refs/for/master$1 && git checkout master && git branch -D push && git stash list"
+        cotb = !git checkout -t -b
+        bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+        stashq = -c commit.gpgsign=false stash
 [color]
         diff = auto
         status = auto
@@ -16,7 +19,8 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
+        editor = mate -w
+        filemode = false
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -31,3 +35,26 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
+[diff]
+        tool = Kaleidoscope
+        algorithm = patience
+[merge]
+        tool = Kaleidoscope
+
+[difftool "Kaleidoscope"]
+        cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+        cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+        trustexitcode = true
+[credential]
+         helper = osxkeychain
+[commit]
+         gpgsign = true
+[hub]
+        protocol = https
+[url "git://github.com/"]
+        insteadOf = https://github.com/
+[url "git@github.com:"]
+        pushInsteadOf = "git://github.com/"
+[url "git@github.com:"]
+        pushInsteadOf = "https://github.com/"

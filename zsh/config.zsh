@@ -1,13 +1,25 @@
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
-fpath=($ZSH/functions $fpath)
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export JAVA_HOME=/Library/Java/Home
+export GOPATH=$HOME/gocode
+export EDITOR="mate -w"
+export HOMEBREW_TEMP=/Volumes/CaseSensitive/tmp
 
-autoload -U $ZSH/functions/*(:t)
+export HH_CONFIG=hicolor
+export HISTCONTROL=ignorespace
+
+fpath=($DOTFILES/functions $fpath)
+
+autoload -U $DOTFILES/functions/*(:t)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+
 
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
@@ -37,3 +49,6 @@ bindkey '^[[5D' beginning-of-line
 bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^?' backward-delete-char
+
+# Use hh for history completion
+bindkey -s "^r" "\eqhh --\n"
