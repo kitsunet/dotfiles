@@ -14,4 +14,4 @@ alias gitupstreams='git for-each-ref --format="%(refname:short)" refs/heads/\* |
 
 # NVM is expensive and I rarely use it, to init nvm use this
 export NVM_DIR="$HOME/.nvm"
-alias init_nvm='. "/Volumes/CaseSensitive/usr/local/opt/nvm/nvm.sh"'
+alias init_nvm='. "/usr/local/opt/nvm/nvm.sh"'
