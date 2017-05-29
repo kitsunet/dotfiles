@@ -9,7 +9,7 @@ export GOPATH=$HOME/gocode
 export EDITOR="mate -w"
 export HOMEBREW_TEMP=/Volumes/CaseSensitive/tmp
 
-export HH_CONFIG=hicolor
+export HH_CONFIG=hicolor,blacklist,keywords
 export HISTCONTROL=ignorespace
 
 fpath=($DOTFILES/functions $fpath)
