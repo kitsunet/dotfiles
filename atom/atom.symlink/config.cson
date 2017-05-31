@@ -37,12 +37,16 @@
       "tmp"
       "vendor"
     ]
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/christian/Code"
+    restorePreviousWindowsOnStart: "always"
     telemetryConsent: "no"
   editor:
-    fontFamily: "Menlo"
-    fontSize: 15
+    fontFamily: "Liberation Mono"
+    fontSize: 14
     invisibles: {}
     showIndentGuide: true
+    showInvisibles: true
     softWrapAtPreferredLineLength: true
   "go-plus":
     panelDisplayMode: "closed"
