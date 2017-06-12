@@ -8,6 +8,8 @@ atom/atom.symlink/storage
 atom/atom.symlink/themes
 atom/atom.symlink/blob-store
 atom/atom.symlink/recovery
+vscode/vscode.symlink/extensions
+vscode/vscode-insiders.symlink/extensions
 
 git/gitconfig.local.symlink
 composer.symlink/*
