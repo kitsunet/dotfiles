@@ -26,7 +26,6 @@
       "exception-reporting"
       "metrics"
       "about"
-      "github"
       "archive-view"
       "package-generator"
       "autocomplete-atom-api"
@@ -35,18 +34,14 @@
       "welcome"
       "snippets"
       "bookmarks"
-      "autocomplete-css"
-      "autocomplete-html"
-      "autocomplete-plus"
       "autoflow"
       "autosave"
-      "dalek"
       "deprecation-cop"
       "timecop"
       "styleguide"
       "open-on-github"
-      "incompatible-packages"
       "image-view"
+      "dev-live-reload"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -60,11 +55,9 @@
     ]
     openEmptyEditorOnStart: false
     projectHome: "/Users/christian/Code"
-    restorePreviousWindowsOnStart: "always"
     telemetryConsent: "no"
   editor:
     fontFamily: "Liberation Mono"
-    fontSize: 14
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
