@@ -35,6 +35,7 @@
       "language-perl"
       "welcome"
       "snippets"
+      "bookmarks"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
