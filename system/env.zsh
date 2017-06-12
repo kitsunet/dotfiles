@@ -1,1 +1,1 @@
-export EDITOR='atom-beta -w'
+export EDITOR='code-insiders -w'

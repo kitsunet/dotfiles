@@ -21,11 +21,20 @@
     webpack: true
   core:
     closeDeletedFileTabs: true
-    closeEmptyWindows: false
     disabledPackages: [
       "background-tips"
       "exception-reporting"
       "metrics"
+      "about"
+      "github"
+      "archive-view"
+      "package-generator"
+      "autocomplete-atom-api"
+      "pretty-json"
+      "spell-check"
+      "language-perl"
+      "welcome"
+      "snippets"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -66,6 +75,11 @@
     ]
   stylefmt:
     formatOnSave: true
+  tabs:
+    alwaysShowTabBar: false
+    showIcons: false
+  "tree-view":
+    alwaysOpenExisting: true
   welcome:
     showOnStartup: false
 ".js.jsx.react.source":
