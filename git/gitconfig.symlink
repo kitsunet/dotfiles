@@ -19,7 +19,7 @@
         ui = true
 [core]
         excludesfile = /Users/christian/.gitignore
-        editor = atom-beta -w
+        editor = atom -w
         filemode = false
 [apply]
         whitespace = nowarn
