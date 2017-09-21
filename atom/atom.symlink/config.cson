@@ -20,19 +20,17 @@
     babelPluginModuleResolver: true
     webpack: true
   core:
+    audioBeep: false
     closeDeletedFileTabs: true
     disabledPackages: [
       "background-tips"
       "exception-reporting"
       "metrics"
-      "about"
       "archive-view"
       "package-generator"
       "autocomplete-atom-api"
       "spell-check"
       "language-perl"
-      "welcome"
-      "bookmarks"
       "autoflow"
       "autosave"
       "deprecation-cop"
@@ -61,6 +59,7 @@
     showIndentGuide: true
     showInvisibles: true
     softWrapAtPreferredLineLength: true
+    tabLength: 4
   "go-plus":
     panelDisplayMode: "closed"
   "linter-eslint":
@@ -82,6 +81,8 @@
   tabs:
     alwaysShowTabBar: false
     showIcons: false
+  "the-closer":
+    closeWindowTogetherWithLastTab: false
   "tree-view":
     alwaysOpenExisting: true
   welcome:
@@ -93,3 +94,6 @@
   editor:
     autoIndent: false
     autoIndentOnPaste: false
+".json.source":
+  editor:
+    softWrapAtPreferredLineLength: false
