@@ -1,4 +1,92 @@
-syntax on
+set incsearch
+set hlsearch
+set nocompatible
+set autoindent
+set history=50
+set ruler
+set showcmd
+set splitbelow
+set splitright
+set clipboard=unnamed
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" Persistent undo
+set undodir=~/.vim/undo/
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+syntax on
+filetype plugin indent on
+
+map Q gq
+
+" Toggle nerdtree with F10
+map <F10> :NERDTreeToggle<CR>
+" Current file in nerdtree
+map <F9> :NERDTreeFind<CR>
+
+"key to insert mode with paste using F2 key
+map <F2> :set paste<CR>i
+
+map <C-c> :.w !pbcopy<CR><CR>
+map <C-v> :r !pbpaste<CR>
+
+map <M-Space> a
+:imap <M-Space> <ESC>
+
+com! FormatJSON %!python -m json.tool
+
+" Airline
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_theme='codedark'
+set t_Co=256
+
+:set smartcase
+:set ignorecase
+
+au InsertLeave * set nopaste
+
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+"   " - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'flazz/vim-colorschemes'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+" Plug 'w0rp/ale' conflicts with syntastic
+Plug 'scrooloose/syntastic'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'elzr/vim-json'
+Plug 'yegappan/mru'
+Plug 'mileszs/ack.vim'
+Plug 'StanAngeloff/php.vim'
+Plug 'tpope/vim-markdown'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tomasiser/vim-code-dark'
+
+
+call plug#end()
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+let g:jsx_ext_required = 0
+colorscheme codedark
+
+
