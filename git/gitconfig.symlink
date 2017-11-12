@@ -18,10 +18,10 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = /Users/christian/.gitignore
+	excludesfile = /Users/christian/.gitignore
 	# editor = code --wait --new-window
 	editor = vim
-	filemode = false
+	fileMode = false
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -50,7 +50,8 @@
 [credential]
          helper = osxkeychain
 [commit]
-         gpgsign = true
+        gpgsign = true
+	template = /Users/christian/.stCommitMsg
 [hub]
         protocol = https
 [url "git://github.com/"]
@@ -70,3 +71,6 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[user]
+	name = Christian Müller
+	email = christian@flownative.com
