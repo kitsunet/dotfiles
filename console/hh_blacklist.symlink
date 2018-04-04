@@ -13,7 +13,20 @@ git push
 git log
 gup
 gst
+git commit
+glo
+gd
+git commit -a
 
 php -v
+php -a
 composer install
 composer update
+
+yarn
+
+funittest
+ffunctionaltest
+fdeltemp
+flow help
+rm -rf Data/Logs

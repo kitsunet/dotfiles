@@ -6,8 +6,8 @@ export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export JAVA_HOME=/Library/Java/Home
 export GOPATH=$HOME/gocode
-export EDITOR="mate -w"
-export HOMEBREW_TEMP=/Volumes/CaseSensitive/tmp
+export EDITOR="code -w"
+export HOMEBREW_TEMP=/tmp
 
 export HH_CONFIG=hicolor,blacklist,keywords
 export HISTCONTROL=ignorespace

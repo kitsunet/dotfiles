@@ -5,6 +5,7 @@
         "sebastian/phpcpd": "*",
         "squizlabs/php_codesniffer": "*",
         "phpmetrics/phpmetrics": "*",
-        "clue/graph-composer": "^1.0"
+        "clue/graph-composer": "^1.0",
+        "kherge/box": "^2.7"
     }
 }
