@@ -12,6 +12,9 @@ alias project='. /usr/local/sbin/project.sh'
 alias behat='bin/behat --ansi -f progress -v'
 alias gitupstreams='git for-each-ref --format="%(refname:short)" refs/heads/\* | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo "$b -> $r/${m##*/}"; fi; done'
 
+# Pipe my public key to my clipboard.
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
 # NVM is expensive and I rarely use it, to init nvm use this
 export NVM_DIR="$HOME/.nvm"
 alias init_nvm='. "/usr/local/opt/nvm/nvm.sh"'

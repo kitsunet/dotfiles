@@ -5,7 +5,6 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export JAVA_HOME=/Library/Java/Home
-export GOPATH=$HOME/gocode
 export EDITOR="code -w"
 export HOMEBREW_TEMP=/tmp
 
@@ -44,9 +43,5 @@ setopt HIST_REDUCE_BLANKS
 #   like: git comm-[tab]
 setopt complete_aliases
 
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^?' backward-delete-char
+bindkey '^[[^A' backward-word
+bindkey '^[[^E' forward-word
