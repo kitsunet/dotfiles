@@ -44,3 +44,7 @@ done
 unset config_files
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+gpg-connect-agent /bye
+export SSH_AGENT_PID=""
+export SSH_AUTH_SOCK=/usr/local/var/run/S.gpg-agent.ssh

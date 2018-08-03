@@ -74,3 +74,4 @@
 [user]
 	name = Christian Müller
 	email = christian@flownative.com
+        signingkey = 0x425C478AFD8C58B3
