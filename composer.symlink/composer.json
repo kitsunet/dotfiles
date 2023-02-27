@@ -1,11 +1,12 @@
 {
     "require": {
-        "phpunit/phpunit": "~4.7",
+        "phpunit/phpunit": "*",
         "friendsofphp/php-cs-fixer": "*",
         "sebastian/phpcpd": "*",
         "squizlabs/php_codesniffer": "*",
         "phpmetrics/phpmetrics": "*",
-        "clue/graph-composer": "^1.0",
-        "kherge/box": "^2.7"
+        "clue/graph-composer": "*",
+        "kherge/box": "*",
+        "phpstan/phpstan": "*"
     }
 }

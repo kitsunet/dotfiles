@@ -1,0 +1,17 @@
+#!/bin/zsh
+#
+# run composer (2) on PHP 7.4
+
+tty=
+tty -s && tty=--tty
+docker run \
+    $tty \
+    --interactive \
+    --rm \
+    --user $(id -u):$(id -g) \
+    --volume /etc/passwd:/etc/passwd:ro \
+    --volume /etc/group:/etc/group:ro \
+    --volume $(pwd):/application:delegated \
+    --volume $HOME/.composer/cache:/home/composer/cache:delegated \
+    --volume $HOME/.composer/auth.json:/home/composer/auth.json \
+    flownative/composer2:7.4 "$@"

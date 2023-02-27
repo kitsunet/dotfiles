@@ -11,7 +11,7 @@ SVN_SHOW_BRANCH="false"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github git-extras osx colorize flow brew composer)
+plugins=(git github git-extras gitfast macos colorize flow brew composer)
 
 
 # Set to this to use case-sensitive completion

@@ -1,9 +1,6 @@
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.dotfiles
 
-# your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
-
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -18,6 +15,7 @@ path_files=($DOTFILES/zsh/path/*.zsh)
 # load the path files
 for file in ${path_files}
 do
+  echo $file
   source $file
 done
 
@@ -46,5 +44,30 @@ unset config_files
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 gpg-connect-agent /bye
-export SSH_AGENT_PID=""
-export SSH_AUTH_SOCK=/usr/local/var/run/S.gpg-agent.ssh
+
+# determine versions of PHP installed with HomeBrew
+installedPhpVersions=($(brew ls --versions | ggrep -E 'php(@.*)?\s' | ggrep -oP '(?<=\s)\d\.\d' | uniq | sort))
+
+# create alias for every version of PHP installed with HomeBrew
+for phpVersion in ${installedPhpVersions[*]}; do
+    value="{"
+
+    for otherPhpVersion in ${installedPhpVersions[*]}; do
+        if [ "${otherPhpVersion}" = "${phpVersion}" ]; then
+            continue
+        fi
+
+        # unlink other PHP version
+        value="${value} brew services stop php@${otherPhpVersion};"
+        value="${value} brew unlink php@${otherPhpVersion};"
+    done
+
+    # link desired PHP version
+    value="${value} brew link php@${phpVersion} --force --overwrite;"
+    value="${value} brew services restart php@${phpVersion}; } &> /dev/null"
+    value="${value} && php -v"
+
+    alias "php_${phpVersion}"="${value}"
+done
+
+source /Users/christian/.docker/init-zsh.sh || true # Added by Docker Desktop
