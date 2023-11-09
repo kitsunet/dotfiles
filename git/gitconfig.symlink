@@ -54,6 +54,8 @@
         protocol = https
 [url "git@github.com:"]
         pushInsteadOf = "git://github.com/"
+[url "git@github.com:"]
+        pushInsteadOf = "https://github.com/"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
