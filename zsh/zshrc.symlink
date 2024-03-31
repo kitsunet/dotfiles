@@ -15,7 +15,6 @@ path_files=($DOTFILES/zsh/path/*.zsh)
 # load the path files
 for file in ${path_files}
 do
-  echo $file
   source $file
 done
 
@@ -69,5 +68,3 @@ for phpVersion in ${installedPhpVersions[*]}; do
 
     alias "php_${phpVersion}"="${value}"
 done
-
-source /Users/christian/.docker/init-zsh.sh || true # Added by Docker Desktop

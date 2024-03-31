@@ -1,0 +1,1 @@
+PATH="/Users/christian/flutter/bin:/Users/christian/flutter:$PATH"

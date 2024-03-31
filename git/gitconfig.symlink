@@ -19,8 +19,7 @@
         ui = true
 [core]
 	excludesfile = /Users/christian/.gitignore
-	# editor = code --wait --new-window
-	editor = vim
+	editor = codium --wait --new-window
 	fileMode = false
 [apply]
         whitespace = nowarn
