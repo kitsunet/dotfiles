@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for f in $@; do
+  ffmpeg -i "${f}" -af "areverse,atrim=start=0,silenceremove=start_periods=1:start_silence=0:start_threshold=0.02,areverse,atrim=start=0,silenceremove=start_periods=1:start_silence=0:start_threshold=0.02" "${f}.tmp.wav" && mv "${f}.tmp.wav ${f}"
+done

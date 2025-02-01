@@ -66,3 +66,5 @@
         signingkey = 0x425C478AFD8C58B3
 [init]
 	defaultBranch = main
+[branch]
+	sort = -committerdate
